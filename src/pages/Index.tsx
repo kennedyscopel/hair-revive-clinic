@@ -1,6 +1,7 @@
 import { Phone, MapPin, Clock, Award, CheckCircle, Star, ArrowRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import logo from "@/assets/logo.jpg";
 import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
@@ -111,7 +112,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="order-2 lg:order-1 animate-fade-up">
+            <AnimatedSection animation="fade-up" className="order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm mb-6">
                 <Award className="h-4 w-4 text-primary" />
                 <span>CRM 18090 ES</span>
@@ -162,9 +163,9 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground">presencial e online</p>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
 
-            <div className="order-1 lg:order-2 relative animate-slide-in-right">
+            <AnimatedSection animation="fade-left" delay={200} className="order-1 lg:order-2 relative">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-gold rounded-3xl opacity-20 blur-2xl" />
                 <img 
@@ -173,7 +174,7 @@ const Index = () => {
                   className="relative w-full max-w-md mx-auto rounded-3xl shadow-card object-cover aspect-[3/4]"
                 />
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -182,7 +183,7 @@ const Index = () => {
       <section id="sobre" className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative">
+            <AnimatedSection animation="fade-right" className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <img 
                   src={doctor2} 
@@ -195,9 +196,9 @@ const Index = () => {
                   className="rounded-2xl shadow-card w-full aspect-[3/4] object-cover mt-8"
                 />
               </div>
-            </div>
+            </AnimatedSection>
 
-            <div>
+            <AnimatedSection animation="fade-up" delay={100}>
               <p className="text-primary font-medium tracking-wider uppercase text-sm mb-4">Sobre a Especialista</p>
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
                 Cuidado especializado e humanizado para sua saúde capilar
@@ -242,7 +243,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -250,7 +251,7 @@ const Index = () => {
       {/* Services Section */}
       <section id="servicos" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-primary font-medium tracking-wider uppercase text-sm mb-4">Serviços</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
               Consulta Especializada em Queda Capilar
@@ -259,68 +260,76 @@ const Index = () => {
               Atendimento presencial e online para homens e mulheres com queda capilar, 
               afinamento dos fios, alopecias ou alterações do couro cabeludo.
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-card rounded-2xl p-8 shadow-soft border border-border hover:shadow-card transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6">
-                <Clock className="h-7 w-7 text-primary-foreground" />
+            <AnimatedSection animation="fade-up" delay={0}>
+              <div className="bg-card rounded-2xl p-8 shadow-soft border border-border hover:shadow-card transition-all duration-300 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6">
+                  <Clock className="h-7 w-7 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-serif font-medium text-foreground mb-3">Consulta Inicial</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Anamnese detalhada, avaliação do couro cabeludo com tricoscopia e definição do diagnóstico preciso.
+                </p>
               </div>
-              <h3 className="text-xl font-serif font-medium text-foreground mb-3">Consulta Inicial</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Anamnese detalhada, avaliação do couro cabeludo com tricoscopia e definição do diagnóstico preciso.
-              </p>
-            </div>
+            </AnimatedSection>
 
-            <div className="bg-card rounded-2xl p-8 shadow-soft border border-border hover:shadow-card transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6">
-                <Award className="h-7 w-7 text-primary-foreground" />
+            <AnimatedSection animation="fade-up" delay={100}>
+              <div className="bg-card rounded-2xl p-8 shadow-soft border border-border hover:shadow-card transition-all duration-300 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6">
+                  <Award className="h-7 w-7 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-serif font-medium text-foreground mb-3">Plano Terapêutico</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Prescrição personalizada com medicamentos, suplementos e procedimentos aprovados pela Anvisa.
+                </p>
               </div>
-              <h3 className="text-xl font-serif font-medium text-foreground mb-3">Plano Terapêutico</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Prescrição personalizada com medicamentos, suplementos e procedimentos aprovados pela Anvisa.
-              </p>
-            </div>
+            </AnimatedSection>
 
-            <div className="bg-card rounded-2xl p-8 shadow-soft border border-border hover:shadow-card transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6">
-                <CheckCircle className="h-7 w-7 text-primary-foreground" />
+            <AnimatedSection animation="fade-up" delay={200}>
+              <div className="bg-card rounded-2xl p-8 shadow-soft border border-border hover:shadow-card transition-all duration-300 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6">
+                  <CheckCircle className="h-7 w-7 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-serif font-medium text-foreground mb-3">Acompanhamento</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Consulta inicial + 6 encontros de acompanhamento com ajustes conforme sua resposta ao tratamento.
+                </p>
               </div>
-              <h3 className="text-xl font-serif font-medium text-foreground mb-3">Acompanhamento</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Consulta inicial + 6 encontros de acompanhamento com ajustes conforme sua resposta ao tratamento.
-              </p>
-            </div>
+            </AnimatedSection>
           </div>
 
           {/* Benefits */}
-          <div className="mt-20 bg-gradient-cream rounded-3xl p-8 md:p-12">
-            <h3 className="text-2xl font-serif font-medium text-foreground mb-8 text-center">
-              Benefícios do Tratamento
-            </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3 bg-background/80 rounded-xl p-4">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">{benefit}</span>
-                </div>
-              ))}
-            </div>
+          <AnimatedSection animation="fade-up" delay={100} className="mt-20">
+            <div className="bg-gradient-cream rounded-3xl p-8 md:p-12">
+              <h3 className="text-2xl font-serif font-medium text-foreground mb-8 text-center">
+                Benefícios do Tratamento
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-3 bg-background/80 rounded-xl p-4">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">{benefit}</span>
+                  </div>
+                ))}
+              </div>
 
-            <div className="mt-8 pt-8 border-t border-border text-center">
-              <p className="text-muted-foreground text-sm">
-                <strong className="text-foreground">Resultados:</strong> Redução da queda entre 2-3 meses • 
-                Melhora visível da densidade a partir de 3-6 meses
-              </p>
+              <div className="mt-8 pt-8 border-t border-border text-center">
+                <p className="text-muted-foreground text-sm">
+                  <strong className="text-foreground">Resultados:</strong> Redução da queda entre 2-3 meses • 
+                  Melhora visível da densidade a partir de 3-6 meses
+                </p>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* How it Works */}
       <section className="py-20 md:py-32 bg-espresso text-cream">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-gold-light font-medium tracking-wider uppercase text-sm mb-4">Processo</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">
               Como Funciona o Atendimento
@@ -328,22 +337,23 @@ const Index = () => {
             <p className="text-cream/70">
               Um processo completo e humanizado para cuidar da sua saúde capilar.
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {steps.map((step, index) => (
-              <div 
-                key={index}
-                className="relative bg-espresso-light/20 rounded-2xl p-6 border border-cream/10 hover:border-gold/30 transition-all duration-300"
-              >
-                <span className="text-5xl font-serif font-light text-gold/30 absolute top-4 right-6">
-                  {step.number}
-                </span>
-                <div className="relative">
-                  <h4 className="text-lg font-medium text-cream mb-2 mt-8">{step.title}</h4>
-                  <p className="text-cream/60 text-sm">{step.description}</p>
+              <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
+                <div 
+                  className="relative bg-espresso-light/20 rounded-2xl p-6 border border-cream/10 hover:border-gold/30 transition-all duration-300 h-full"
+                >
+                  <span className="text-5xl font-serif font-light text-gold/30 absolute top-4 right-6">
+                    {step.number}
+                  </span>
+                  <div className="relative">
+                    <h4 className="text-lg font-medium text-cream mb-2 mt-8">{step.title}</h4>
+                    <p className="text-cream/60 text-sm">{step.description}</p>
+                  </div>
                 </div>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -352,29 +362,30 @@ const Index = () => {
       {/* Testimonials */}
       <section id="depoimentos" className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-primary font-medium tracking-wider uppercase text-sm mb-4">Depoimentos</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
               O que dizem as pacientes
             </h2>
-          </div>
+          </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="bg-card rounded-2xl p-8 shadow-soft border border-border"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
+              <AnimatedSection key={index} animation="scale" delay={index * 100}>
+                <div 
+                  className="bg-card rounded-2xl p-8 shadow-soft border border-border h-full"
+                >
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="text-foreground italic mb-4 leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+                  <p className="text-sm text-muted-foreground">— {testimonial.author}</p>
                 </div>
-                <p className="text-foreground italic mb-4 leading-relaxed">
-                  "{testimonial.text}"
-                </p>
-                <p className="text-sm text-muted-foreground">— {testimonial.author}</p>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -383,7 +394,7 @@ const Index = () => {
       {/* Locations */}
       <section id="locais" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-primary font-medium tracking-wider uppercase text-sm mb-4">Locais de Atendimento</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
               Instituto Health
@@ -391,48 +402,52 @@ const Index = () => {
             <p className="text-muted-foreground">
               Clínica parceira com estrutura completa para seu atendimento.
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border">
-              <img 
-                src={clinic1} 
-                alt="Instituto Health Cariacica" 
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-serif font-medium text-foreground mb-2">Cariacica</h3>
-                <div className="flex items-start gap-3 text-muted-foreground text-sm mb-4">
-                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <p>
-                    Villaggio Campo Grande Comercial<br />
-                    Rua Waldemar Siepierski, 200<br />
-                    Loja 44 (Térreo, Corredor da BR)<br />
-                    CEP 29147-600
-                  </p>
+            <AnimatedSection animation="fade-right" delay={0}>
+              <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full">
+                <img 
+                  src={clinic1} 
+                  alt="Instituto Health Cariacica" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-serif font-medium text-foreground mb-2">Cariacica</h3>
+                  <div className="flex items-start gap-3 text-muted-foreground text-sm mb-4">
+                    <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <p>
+                      Villaggio Campo Grande Comercial<br />
+                      Rua Waldemar Siepierski, 200<br />
+                      Loja 44 (Térreo, Corredor da BR)<br />
+                      CEP 29147-600
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
 
-            <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border">
-              <div className="w-full h-48 bg-gradient-cream flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <p className="text-muted-foreground text-sm">Vila Velha</p>
+            <AnimatedSection animation="fade-left" delay={100}>
+              <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full">
+                <div className="w-full h-48 bg-gradient-cream flex items-center justify-center">
+                  <div className="text-center">
+                    <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
+                    <p className="text-muted-foreground text-sm">Vila Velha</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-serif font-medium text-foreground mb-2">Vila Velha</h3>
+                  <div className="flex items-start gap-3 text-muted-foreground text-sm mb-4">
+                    <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <p>
+                      Shopping Praia da Costa<br />
+                      Torre Leste - Sala 101<br />
+                      Rua Inácio Higino, 1050
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-serif font-medium text-foreground mb-2">Vila Velha</h3>
-                <div className="flex items-start gap-3 text-muted-foreground text-sm mb-4">
-                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <p>
-                    Shopping Praia da Costa<br />
-                    Torre Leste - Sala 101<br />
-                    Rua Inácio Higino, 1050
-                  </p>
-                </div>
-              </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -445,7 +460,7 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-3xl mx-auto text-center">
+          <AnimatedSection animation="scale" className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-primary-foreground mb-6">
               Recupere a confiança no seu cabelo
             </h2>
@@ -466,7 +481,7 @@ const Index = () => {
             <p className="mt-6 text-primary-foreground/60 text-sm">
               (27) 99244-9495 • Atendimento presencial e online
             </p>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
