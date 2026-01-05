@@ -7,6 +7,7 @@ import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
 import clinic1 from "@/assets/clinic-1.jpg";
 import clinic2 from "@/assets/clinic-2.jpg";
+import clinicPraiaCosta from "@/assets/clinic-praia-costa.jpg";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -429,12 +430,11 @@ const Index = () => {
 
             <AnimatedSection animation="fade-left" delay={100}>
               <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full">
-                <div className="w-full h-48 bg-gradient-cream flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
-                    <p className="text-muted-foreground text-sm">Vila Velha</p>
-                  </div>
-                </div>
+                <img 
+                  src={clinicPraiaCosta} 
+                  alt="Instituto Health Vila Velha - Shopping Praia da Costa" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-serif font-medium text-foreground mb-2">Vila Velha</h3>
                   <div className="flex items-start gap-3 text-muted-foreground text-sm mb-4">
