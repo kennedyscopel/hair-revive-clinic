@@ -5,8 +5,7 @@ import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import logo from "@/assets/logo.jpg";
 import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
-import clinic1 from "@/assets/clinic-1.jpg";
-import clinic2 from "@/assets/clinic-2.jpg";
+import clinicCariacica from "@/assets/clinic-cariacica.jpg";
 import clinicPraiaCosta from "@/assets/clinic-praia-costa.jpg";
 
 const Index = () => {
@@ -185,18 +184,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <AnimatedSection animation="fade-right" className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <img 
-                  src={doctor2} 
-                  alt="Dra. Gabrielle" 
-                  className="rounded-2xl shadow-card w-full aspect-[3/4] object-cover"
-                />
-                <img 
-                  src={clinic2} 
-                  alt="Consultório" 
-                  className="rounded-2xl shadow-card w-full aspect-[3/4] object-cover mt-8"
-                />
-              </div>
+              <img 
+                src={doctor2} 
+                alt="Dra. Gabrielle" 
+                className="rounded-2xl shadow-card w-full aspect-[3/4] object-cover max-w-md mx-auto"
+              />
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
@@ -409,8 +401,8 @@ const Index = () => {
             <AnimatedSection animation="fade-right" delay={0}>
               <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full">
                 <img 
-                  src={clinic1} 
-                  alt="Instituto Health Cariacica" 
+                  src={clinicCariacica} 
+                  alt="Instituto Health Cariacica - Villaggio Campo Grande" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
