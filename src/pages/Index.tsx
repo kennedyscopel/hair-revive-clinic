@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Award, CheckCircle, Star, ArrowRight, Menu, X } from "lucide-react";
+import { Phone, MapPin, Clock, Award, CheckCircle, Star, ArrowRight, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
@@ -440,6 +440,70 @@ const Index = () => {
                 </div>
               </div>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 md:py-32 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
+            <p className="text-primary font-medium tracking-wider uppercase text-sm mb-4">Dúvidas Frequentes</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
+              Perguntas Frequentes
+            </h2>
+            <p className="text-muted-foreground">
+              Tire suas principais dúvidas sobre tricologia e tratamentos capilares.
+            </p>
+          </AnimatedSection>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              {
+                question: "Meu cabelo vai voltar a crescer?",
+                answer: "A resposta depende do diagnóstico. Muitos tipos de queda capilar são reversíveis quando tratados corretamente e no tempo adequado. Na consulta, faço uma avaliação completa para determinar as chances de recuperação e qual o melhor tratamento para o seu caso."
+              },
+              {
+                question: "Vou precisar usar medicação para sempre?",
+                answer: "Nem sempre. O tratamento é individualizado e pode incluir medicamentos, suplementos, procedimentos ou mudanças de hábitos. Alguns casos precisam de manutenção contínua, outros não. Isso será discutido de forma transparente durante a consulta."
+              },
+              {
+                question: "Em quanto tempo verei resultados?",
+                answer: "A redução da queda geralmente é percebida entre 2 a 3 meses. Já a melhora visível da densidade e qualidade dos fios costuma aparecer a partir de 3 a 6 meses, variando conforme o diagnóstico e a resposta individual ao tratamento."
+              },
+              {
+                question: "O tratamento tem efeitos colaterais?",
+                answer: "Todos os tratamentos são prescritos de forma racional e individualizada, sempre avaliando riscos e benefícios. Quando há possibilidade de efeitos colaterais, isso é explicado previamente para que você tome uma decisão informada."
+              },
+              {
+                question: "Preciso fazer exames antes da consulta?",
+                answer: "Não é obrigatório. Durante a consulta, avalio seu caso completo e, se necessário, solicito exames específicos para complementar o diagnóstico. Se você já tiver exames recentes, pode trazê-los para a avaliação."
+              },
+              {
+                question: "A consulta pode ser online?",
+                answer: "Sim! Ofereço atendimento híbrido (presencial e online). A consulta online é ideal para quem está longe, para acompanhamento ou para uma primeira avaliação. Casos que necessitam de exame físico detalhado do couro cabeludo são melhor avaliados presencialmente."
+              },
+              {
+                question: "O tratamento funciona para homens e mulheres?",
+                answer: "Sim. Atendo homens e mulheres com queda capilar, afinamento dos fios, alopecias ou alterações do couro cabeludo. O diagnóstico e tratamento são sempre personalizados para cada paciente."
+              },
+              {
+                question: "Quantas consultas são necessárias?",
+                answer: "O acompanhamento padrão inclui a consulta inicial mais 6 retornos para ajustes e monitoramento da evolução. A frequência pode variar conforme a necessidade de cada caso."
+              }
+            ].map((faq, index) => (
+              <AnimatedSection key={index} animation="fade-up" delay={index * 50}>
+                <details className="group bg-card rounded-xl border border-border overflow-hidden">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-medium text-foreground pr-4">{faq.question}</span>
+                    <ChevronDown className="h-5 w-5 text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 pt-0">
+                    <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                  </div>
+                </details>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
