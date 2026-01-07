@@ -97,12 +97,23 @@ export default {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
+        "whatsapp-pulse": {
+          "0%": { transform: "scale(1)", boxShadow: "0 0 0 0 rgba(37, 211, 102, 0.7)" },
+          "50%": { transform: "scale(1.05)", boxShadow: "0 0 0 15px rgba(37, 211, 102, 0)" },
+          "100%": { transform: "scale(1)", boxShadow: "0 0 0 0 rgba(37, 211, 102, 0)" },
+        },
+        bounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         float: "float 6s ease-in-out infinite",
         shimmer: "shimmer 3s linear infinite",
+        "whatsapp-pulse": "whatsapp-pulse 2s ease-in-out infinite",
+        bounce: "bounce 1s ease-in-out infinite",
       },
     },
   },
