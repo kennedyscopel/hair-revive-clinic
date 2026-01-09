@@ -356,7 +356,8 @@ const Index = () => {
       <section id="depoimentos" className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-primary font-medium tracking-wider uppercase text-sm mb-4">Depoimentos</p>
+            <h3 className="text-primary font-medium tracking-wider uppercase text-sm mb-2">Tricologia e Transplante Capilar</h3>
+            <p className="text-muted-foreground text-sm mb-4">Depoimentos</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
               O que dizem os pacientes
             </h2>
