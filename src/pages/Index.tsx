@@ -32,20 +32,16 @@ const Index = () => {
 
   const testimonials = [
     {
-      text: "Gostei muito da forma como tudo foi explicado, sem pressa e de forma muito clara.",
-      author: "Carlos M.",
+      text: "Consulta maravilhosa, médica atenciosa e atualizada. Só tratamento com embasamento científico, sem balela pra vender coisa que você não precisa!!",
+      author: "Yasmim S. P.",
     },
     {
-      text: "Minha queda diminuiu bastante depois de alguns meses, e hoje me sinto muito mais seguro com meu cabelo.",
-      author: "Rafael S.",
+      text: "Uma médica excelente, cuidadosa, detalhista. Explica de uma forma fácil de entender sobre os tratamentos capilares. Eu recomendo!",
+      author: "Bruno R.",
     },
     {
-      text: "Me senti acolhido desde a primeira consulta.",
-      author: "Eduardo L.",
-    },
-    {
-      text: "Me sinto mais confiante quando me olho no espelho.",
-      author: "André P.",
+      text: "A consulta foi muito boa, a Dra explicou tudo com riqueza de detalhes, esclareceu as dúvidas, fiquei bastante satisfeita, super recomendo!",
+      author: "Rita N.",
     },
   ];
 
