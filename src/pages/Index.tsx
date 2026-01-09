@@ -33,19 +33,19 @@ const Index = () => {
   const testimonials = [
     {
       text: "Gostei muito da forma como tudo foi explicado, sem pressa e de forma muito clara.",
-      author: "Paciente",
+      author: "Carlos M.",
     },
     {
-      text: "Minha queda diminuiu bastante depois de alguns meses, e hoje me sinto muito mais segura com meu cabelo.",
-      author: "Paciente",
+      text: "Minha queda diminuiu bastante depois de alguns meses, e hoje me sinto muito mais seguro com meu cabelo.",
+      author: "Rafael S.",
     },
     {
-      text: "Me senti acolhida desde a primeira consulta.",
-      author: "Paciente",
+      text: "Me senti acolhido desde a primeira consulta.",
+      author: "Eduardo L.",
     },
     {
       text: "Me sinto mais confiante quando me olho no espelho.",
-      author: "Paciente",
+      author: "André P.",
     },
   ];
 
@@ -358,7 +358,7 @@ const Index = () => {
           <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-primary font-medium tracking-wider uppercase text-sm mb-4">Depoimentos</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
-              O que dizem as pacientes
+              O que dizem os pacientes
             </h2>
           </AnimatedSection>
 
