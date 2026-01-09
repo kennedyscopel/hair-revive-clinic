@@ -7,7 +7,9 @@ import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
 import clinicCariacica from "@/assets/clinic-cariacica.jpg";
 import clinicPraiaCosta from "@/assets/clinic-praia-costa.jpg";
-
+import testimonialYasmim from "@/assets/testimonial-yasmim.png";
+import testimonialBruno from "@/assets/testimonial-bruno.png";
+import testimonialRita from "@/assets/testimonial-rita.png";
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -34,14 +36,17 @@ const Index = () => {
     {
       text: "Consulta maravilhosa, médica atenciosa e atualizada. Só tratamento com embasamento científico, sem balela pra vender coisa que você não precisa!!",
       author: "Yasmim S. P.",
+      image: testimonialYasmim,
     },
     {
       text: "Uma médica excelente, cuidadosa, detalhista. Explica de uma forma fácil de entender sobre os tratamentos capilares. Eu recomendo!",
       author: "Bruno R.",
+      image: testimonialBruno,
     },
     {
       text: "A consulta foi muito boa, a Dra explicou tudo com riqueza de detalhes, esclareceu as dúvidas, fiquei bastante satisfeita, super recomendo!",
       author: "Rita N.",
+      image: testimonialRita,
     },
   ];
 
@@ -362,21 +367,30 @@ const Index = () => {
             </h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <AnimatedSection key={index} animation="scale" delay={index * 100}>
                 <div 
-                  className="bg-card rounded-2xl p-8 shadow-soft border border-border h-full"
+                  className="bg-card rounded-2xl p-6 shadow-soft border border-border h-full flex flex-col"
                 >
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
+                  <div className="flex items-center gap-4 mb-4">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.author}
+                      className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                    />
+                    <div>
+                      <p className="font-medium text-foreground">{testimonial.author}</p>
+                      <div className="flex gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-3 w-3 fill-primary text-primary" />
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-foreground italic mb-4 leading-relaxed">
+                  <p className="text-foreground/80 text-sm italic leading-relaxed flex-1">
                     "{testimonial.text}"
                   </p>
-                  <p className="text-sm text-muted-foreground">— {testimonial.author}</p>
                 </div>
               </AnimatedSection>
             ))}
