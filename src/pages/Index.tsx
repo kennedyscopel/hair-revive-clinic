@@ -460,6 +460,10 @@ const Index = () => {
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               {
+                question: "Por que uma consulta de tricologia com uma médica é um diferencial?",
+                answer: "A tricologia médica vai além da estética. Como médica, posso investigar causas internas da queda capilar — como alterações hormonais, deficiências nutricionais, doenças autoimunes ou uso de medicamentos — e prescrever tratamentos adequados, incluindo medicamentos controlados quando necessário. Isso garante um diagnóstico preciso e um tratamento seguro, baseado em evidências científicas."
+              },
+              {
                 question: "Meu cabelo vai voltar a crescer?",
                 answer: "A resposta depende do diagnóstico. Muitos tipos de queda capilar são reversíveis quando tratados corretamente e no tempo adequado. Na consulta, faço uma avaliação completa para determinar as chances de recuperação e qual o melhor tratamento para o seu caso."
               },
