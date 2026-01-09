@@ -167,6 +167,9 @@ const Index = () => {
 
             <AnimatedSection animation="fade-left" delay={200} className="order-1 lg:order-2 relative">
               <div className="relative">
+                <h2 className="text-center text-primary font-medium tracking-wider uppercase text-sm mb-4">
+                  Tricologia e Transplante Capilar
+                </h2>
                 <div className="absolute -inset-4 bg-gradient-gold rounded-3xl opacity-20 blur-2xl" />
                 <img 
                   src={doctor1} 
