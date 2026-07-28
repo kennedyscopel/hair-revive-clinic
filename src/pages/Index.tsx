@@ -5,8 +5,6 @@ import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import logo from "@/assets/logo.jpg";
 import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
-import clinicCariacica from "@/assets/clinic-cariacica.jpg";
-import clinicPraiaCosta from "@/assets/clinic-praia-costa.jpg";
 import testimonialYasmim from "@/assets/testimonial-yasmim.png";
 import testimonialBruno from "@/assets/testimonial-bruno.png";
 import testimonialRita from "@/assets/testimonial-rita.png";
