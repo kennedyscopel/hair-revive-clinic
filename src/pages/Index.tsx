@@ -369,10 +369,10 @@ const Index = () => {
           <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-primary font-medium tracking-wider uppercase text-sm mb-4">Locais de Atendimento</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
-              Instituto Health
+              Onde Atendo
             </h2>
             <p className="text-muted-foreground">
-              Clínica parceira com estrutura completa para seu atendimento.
+              Confira as unidades disponíveis para o seu atendimento.
             </p>
           </AnimatedSection>
 
