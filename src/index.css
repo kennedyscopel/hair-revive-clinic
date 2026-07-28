@@ -6,54 +6,56 @@
 
 @layer base {
   :root {
-    --background: 30 20% 98%;
-    --foreground: 25 30% 15%;
+    /* Nude & Rose Moderno — palette locked
+       #faf7f4 background • #e8d5c9 surface • #c4877a rose • #2d1f1a ink */
+    --background: 30 38% 97%;
+    --foreground: 16 27% 14%;
 
-    --card: 30 15% 97%;
-    --card-foreground: 25 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 16 27% 14%;
 
-    --popover: 30 20% 98%;
-    --popover-foreground: 25 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 16 27% 14%;
 
-    --primary: 20 40% 63%;
-    --primary-foreground: 30 20% 98%;
+    --primary: 11 39% 62%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 15% 94%;
-    --secondary-foreground: 25 30% 20%;
+    --secondary: 23 40% 92%;
+    --secondary-foreground: 16 27% 14%;
 
-    --muted: 30 10% 92%;
-    --muted-foreground: 25 15% 45%;
+    --muted: 23 40% 92%;
+    --muted-foreground: 16 15% 40%;
 
-    --accent: 20 35% 55%;
-    --accent-foreground: 30 20% 98%;
+    --accent: 23 40% 85%;
+    --accent-foreground: 16 27% 14%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 25 20% 88%;
-    --input: 25 20% 88%;
-    --ring: 20 40% 63%;
+    --border: 23 30% 88%;
+    --input: 23 30% 88%;
+    --ring: 11 39% 62%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    /* Custom tokens */
-    --gold: 20 40% 63%;
-    --gold-light: 20 35% 75%;
-    --gold-dark: 20 45% 50%;
-    --cream: 30 25% 96%;
-    --cream-dark: 30 20% 92%;
-    --espresso: 25 30% 18%;
-    --espresso-light: 25 20% 35%;
-    
+    /* Legacy semantic aliases (kept so existing className usage keeps working) */
+    --gold: 11 39% 62%;
+    --gold-light: 11 45% 75%;
+    --gold-dark: 11 40% 52%;
+    --cream: 23 40% 92%;
+    --cream-dark: 23 40% 85%;
+    --espresso: 16 27% 14%;
+    --espresso-light: 16 20% 28%;
+
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(20 40% 63%), hsl(20 35% 70%));
-    --gradient-cream: linear-gradient(180deg, hsl(30 25% 98%), hsl(30 20% 94%));
-    --gradient-hero: linear-gradient(135deg, hsl(30 20% 98%) 0%, hsl(25 25% 95%) 100%);
-    
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(25 30% 15% / 0.08);
-    --shadow-gold: 0 8px 30px -8px hsl(20 40% 63% / 0.3);
-    --shadow-card: 0 10px 40px -10px hsl(25 30% 15% / 0.1);
+    --gradient-gold: linear-gradient(135deg, hsl(11 39% 62%), hsl(11 45% 72%));
+    --gradient-cream: linear-gradient(180deg, hsl(30 38% 97%), hsl(23 40% 92%));
+    --gradient-hero: linear-gradient(135deg, hsl(30 38% 97%) 0%, hsl(23 40% 92%) 100%);
+
+    /* Shadows — softer, more modern */
+    --shadow-soft: 0 2px 12px -4px hsl(16 27% 14% / 0.06);
+    --shadow-gold: 0 12px 32px -12px hsl(11 39% 62% / 0.35);
+    --shadow-card: 0 8px 32px -12px hsl(16 27% 14% / 0.08);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
