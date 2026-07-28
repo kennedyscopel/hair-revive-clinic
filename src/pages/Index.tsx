@@ -5,8 +5,6 @@ import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import logo from "@/assets/logo.jpg";
 import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
-import clinicCariacica from "@/assets/clinic-cariacica.jpg";
-import clinicPraiaCosta from "@/assets/clinic-praia-costa.jpg";
 import testimonialYasmim from "@/assets/testimonial-yasmim.png";
 import testimonialBruno from "@/assets/testimonial-bruno.png";
 import testimonialRita from "@/assets/testimonial-rita.png";
@@ -378,46 +376,48 @@ const Index = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <AnimatedSection animation="fade-right" delay={0}>
-              <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full">
-                <img 
-                  src={clinicCariacica} 
-                  alt="Instituto Health Cariacica - Villaggio Campo Grande" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-serif font-medium text-foreground mb-2">Cariacica</h3>
-                  <div className="flex items-start gap-3 text-muted-foreground text-sm mb-4">
-                    <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p>
-                      Villaggio Campo Grande Comercial<br />
-                      Rua Waldemar Siepierski, 200<br />
-                      Loja 44 (Térreo, Corredor da BR)<br />
-                      CEP 29147-600
-                    </p>
-                  </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <AnimatedSection animation="fade-up" delay={0}>
+              <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full p-6">
+                <h3 className="text-xl font-serif font-medium text-foreground mb-3">Vila Velha - ES</h3>
+                <div className="flex items-start gap-3 text-muted-foreground text-sm">
+                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <p>
+                    Ed. MQ Business - Sala 114<br />
+                    Rua Professor Telmo de Souza Torres, 255<br />
+                    Praia da Costa, Vila Velha - ES<br />
+                    <span className="text-xs">(Prédio ao lado do Hospital Praia da Costa)</span>
+                  </p>
                 </div>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection animation="fade-left" delay={100}>
-              <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full">
-                <img 
-                  src={clinicPraiaCosta} 
-                  alt="Instituto Health Vila Velha - Shopping Praia da Costa" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-serif font-medium text-foreground mb-2">Vila Velha</h3>
-                  <div className="flex items-start gap-3 text-muted-foreground text-sm mb-4">
-                    <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p>
-                      Shopping Praia da Costa<br />
-                      Torre Leste - Sala 101<br />
-                      Rua Inácio Higino, 1050
-                    </p>
-                  </div>
+            <AnimatedSection animation="fade-up" delay={100}>
+              <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full p-6">
+                <h3 className="text-xl font-serif font-medium text-foreground mb-3">Vitória - ES</h3>
+                <div className="flex items-start gap-3 text-muted-foreground text-sm">
+                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <p>
+                    Lanzza Clinic<br />
+                    Ed. Victória Office Tower - Torre Leste, Sala 305<br />
+                    Av. Américo Buaiz, 501<br />
+                    Enseada do Suá, Vitória - ES<br />
+                    CEP 29050-463
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fade-up" delay={200}>
+              <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border h-full p-6">
+                <h3 className="text-xl font-serif font-medium text-foreground mb-3">Niterói - RJ</h3>
+                <div className="flex items-start gap-3 text-muted-foreground text-sm">
+                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <p>
+                    Edifício Central Park - Sala 310<br />
+                    Rua Otávio Carneiro, 143<br />
+                    Icaraí, Niterói - RJ
+                  </p>
                 </div>
               </div>
             </AnimatedSection>
